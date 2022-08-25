@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Covid-Web-React/static/css/main.1715a471.chunk.css",
+    "main.js": "/Covid-Web-React/static/js/main.822e9dc6.chunk.js",
+    "main.js.map": "/Covid-Web-React/static/js/main.822e9dc6.chunk.js.map",
+    "runtime-main.js": "/Covid-Web-React/static/js/runtime-main.fd4af3a9.js",
+    "runtime-main.js.map": "/Covid-Web-React/static/js/runtime-main.fd4af3a9.js.map",
+    "static/js/2.fe9e395e.chunk.js": "/Covid-Web-React/static/js/2.fe9e395e.chunk.js",
+    "static/js/2.fe9e395e.chunk.js.map": "/Covid-Web-React/static/js/2.fe9e395e.chunk.js.map",
+    "index.html": "/Covid-Web-React/index.html",
+    "static/css/main.1715a471.chunk.css.map": "/Covid-Web-React/static/css/main.1715a471.chunk.css.map",
+    "static/js/2.fe9e395e.chunk.js.LICENSE.txt": "/Covid-Web-React/static/js/2.fe9e395e.chunk.js.LICENSE.txt",
+    "static/media/account.64741bf5.png": "/Covid-Web-React/static/media/account.64741bf5.png",
+    "static/media/bg.c8b6e025.png": "/Covid-Web-React/static/media/bg.c8b6e025.png",
+    "static/media/covid1.02106246.jpg": "/Covid-Web-React/static/media/covid1.02106246.jpg",
+    "static/media/covid2.4352e2e2.png": "/Covid-Web-React/static/media/covid2.4352e2e2.png",
+    "static/media/f1.0b885ab7.png": "/Covid-Web-React/static/media/f1.0b885ab7.png",
+    "static/media/f2.ce8df63e.png": "/Covid-Web-React/static/media/f2.ce8df63e.png",
+    "static/media/full.b9b88cbc.png": "/Covid-Web-React/static/media/full.b9b88cbc.png",
+    "static/media/login-img.d8f82a57.jpg": "/Covid-Web-React/static/media/login-img.d8f82a57.jpg",
+    "static/media/login.332b0466.png": "/Covid-Web-React/static/media/login.332b0466.png",
+    "static/media/necessary-order.b8bec04f.png": "/Covid-Web-React/static/media/necessary-order.b8bec04f.png",
+    "static/media/pay.1f26606d.png": "/Covid-Web-React/static/media/pay.1f26606d.png",
+    "static/media/rectangle_2.c33b6032.png": "/Covid-Web-React/static/media/rectangle_2.c33b6032.png",
+    "static/media/registrer.35f5e077.jpg": "/Covid-Web-React/static/media/registrer.35f5e077.jpg",
+    "static/media/settings.c8313580.png": "/Covid-Web-React/static/media/settings.c8313580.png",
+    "static/media/trans.c8b6e025.png": "/Covid-Web-React/static/media/trans.c8b6e025.png",
+    "static/media/undraw_profile.86b42d1a.svg": "/Covid-Web-React/static/media/undraw_profile.86b42d1a.svg",
+    "static/media/update.84a433e4.png": "/Covid-Web-React/static/media/update.84a433e4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd4af3a9.js",
+    "static/js/2.fe9e395e.chunk.js",
+    "static/css/main.1715a471.chunk.css",
+    "static/js/main.822e9dc6.chunk.js"
+  ]
+}
