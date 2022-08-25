@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../../context/Context";
 import { useContext } from "react";
 
-export default function Manager({ manager }) {
+export default function Manager({ manager, idx }) {
 	const {token} = useContext(Context);
 	const config = {
 		headers: {
@@ -16,25 +16,24 @@ export default function Manager({ manager }) {
 		try {
 			await axios.get(`/managers/${manager.username}/block`, config);
 		} catch(err) {
-			console.log(err.response.data);
+			console.log(err);
 		}
 	}
 	return (
-		<div className="post">      
-			<div className="postInfo">        
-				
-				<span className="postTitle">{manager.username}</span>								
-				<span className="postTitle">******</span>
-			</div>	
-			<button onClick={onClickBlockBtn}>
-				Block
-			</button>
-			<Link to={`/listManageProcesses/?username=${manager.username}`} className="link">
-				<button onClick={onClickBlockBtn}>
-					Manage Processes
+		<>     
+			<tr>
+				<th scope="row">{idx}</th>
+				<td>{manager.username}</td>
+				<td>{manager.email}</td>
+				<button onClick={onClickBlockBtn} className="btn btn-primary">
+					Khóa
 				</button>
-			</Link>	
-		</div>
+				<button className="btn btn-primary">
+					Lịch sử quản lý
+				</button>
+			</tr>
+			
+		</>
 
 	);
 }

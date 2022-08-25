@@ -1,39 +1,55 @@
 
-import "./managerFeatures.css";
+import ManagerFeaturesCSS from "./managerFeatures.module.css";
 import { Link } from "react-router-dom";
+import { rectangle2, account, manage, location } 
+	from "../../../assets";
+import ManagerSidebar from "../manager-sidebar/ManagerSidebar";
+import Topbar from "../../topbar/TopBar";
 
-import f1 from '../../../assets/f1.png'
-import f2 from '../../../assets/f2.png'
-import f3 from '../../../assets/f3.png'
-import f4 from '../../../assets/f4.png'
+
+
 
 export default function ManagerFeatures() {
   return (
-    <div className="posts">		
+	<div id="page-top" style={{backgroundImage: `url(${rectangle2})`}}>   
+	{/* Page Wrapper */}
+	<div id="wrapper">
+	 <ManagerSidebar />
+	  {/* Content Wrapper */}
+	  <div id="content-wrapper" className="d-flex flex-column">
+	  <div id="content">
+		<Topbar />  
+		{/* Main Content */}
+		<div className="container-fluid">
+		{/* Page Heading */}
+		{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+		<div className="row">
+		<div className="col-12 col-sm-6 col-md-4">
 		<Link to={'/listUsers'} className="link">
-			<div className="post">
-				<img className="postImg" src={f1} alt="" />
-				<div className="postInfo">									
-					<span className="postTitle">Quản lý người dùng</span>								
-				</div>			
-			</div>
+			<button className="btn1 rounded" style={{"margin":"30px", "height":"188px", "width":"255px"}}><img src={account} alt="" /><br />Quản lý người dùng</button>
 		</Link>
-		<Link to={`/listNecessaries`} className="link">
-			<div className="post">
-				<img className="postImg" src={f3} alt="" />
-				<div className="postInfo">									
-					<span className="postTitle">Nhu Yếu phẩm</span>								
-				</div>			
-			</div>
-		</Link>	
-		<Link to={`/listNecessariesPackages`} className="link">
-			<div className="post">
-				<img className="postImg" src={f4} alt="" />
-				<div className="postInfo">									
-					<span className="postTitle">Gói Nhu Yếu Phẩm</span>								
-				</div>			
-			</div>
-		</Link>	
-    </div>
+		</div>
+		<div className="col-12 col-sm-6 col-md-4">
+		<Link to={'/listNecessaries'} className="link">
+			<button className="btn2 rounded" style={{"margin":"30px", "height":"188px", "width":"255px"}}><img src={manage} alt="" /><br />Quản lý sản phẩm</button>
+		</Link>
+		</div>
+		<div className="col-12 col-sm-6 col-md-4">
+		<Link to={'/listNecessariesPackages'} className="link">
+			<button className="btn3 rounded" style={{"margin":"30px", "height":"188px", "width":"255px"}}><img src={location} alt="" /><br />Quản lý gói sản phẩm</button>
+		</Link>
+		</div>
+		</div>       
+	</div>
+	{/* /.container-fluid */}
+			{/* End of Main Content */}
+		</div>
+		{/* End of Content Wrapper */}
+		</div>        
+	</div>
+	</div>
+
+	
   );
 }
+

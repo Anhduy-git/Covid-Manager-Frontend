@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import Header from "../../../components/header/Header";
 import ManagerSidebar from "../../../components/manager-components/manager-sidebar/ManagerSidebar";
 import Users from "../../../components/manager-components/users/Users";
-import "./listUsers.css";
 import axios from "axios";
 import { useContext } from "react";
 import { Context } from "../../../context/Context";
 import { Link } from "react-router-dom";
+import { rectangle2, account, manage, location, register } 
+	from "../../../assets";
+import Topbar from "../../../components/topbar/TopBar";
+
 
 export default function ListUsers() {	
 
@@ -102,10 +105,50 @@ export default function ListUsers() {
 	},[users, sortTerm]); 
 	
 	return (
-	<>
-		<Header />
-		
-		<div className="home">
+		<div id="page-top" style={{backgroundImage: `url(${rectangle2})`}}>   
+			{/* Page Wrapper */}
+			<div id="wrapper">
+			<ManagerSidebar />
+			{/* Content Wrapper */}
+			<div id="content-wrapper" className="d-flex flex-column">
+			<div id="content">
+				<Topbar />  
+				<div className="container-fluid">
+        {/* Page Heading */}
+        {/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+        <h1 className="h4 text-gray-900 mb-4 text-center">Danh sách người dùng</h1>
+        <div className="overflow-scroll main-content">
+          <div className="card o-hidden border-0 shadow-lg my-5">
+            <div className="card-body p-0">
+              {/* Nested Row within Card Body */}
+				<div className="row">
+					<div className="col-lg-12">
+					<div className="p-5">
+						<form className="user">
+							<Users users={users} searchTerm={searchTerm}/>
+						</form>
+					</div>
+					</div>
+				</div>
+				
+				
+				</div>
+			</div>
+			</div>   
+		</div>
+				{/* /.container-fluid */}
+			
+					{/* End of Main Content */}
+				</div>
+				{/* End of Content Wrapper */}
+				</div>        
+			</div>			
+		</div>
+	);
+}
+
+
+{/* <div className="home">
 			<input type="text" 
 				placeholder="Search by id number"
 				onChange={(event) => {
@@ -124,9 +167,5 @@ export default function ListUsers() {
 					Add
 				</button>	
 			</Link>
-
-			<ManagerSidebar />
-		</div>
-	</>
-	);
-}
+			
+		</div> */}

@@ -61,32 +61,27 @@ export default function ListNecessariesPackages() {
 	}); //if search update, then run again
 
 	return (
-	<>
-		<Header />
-		<div className="home">
-			<div>
-				<input type="text" 
-					placeholder="Search by name"
-					onChange={(event) => {
-						setSearchTerm(event.target.value);					
-				}} />
-			</div>
-
-			<button className="loginButton" onClick={onNameSortClick}>
-				Sort By Name
-			</button>	
-			<button className="loginButton" onClick={onPriceSortClick}>
-				Sort By Total Price
-			</button>		
-			<NecessariesPackages necessariesPackages={necessariesPackages} searchTerm={searchTerm}/>	
-
-			<Link to={"/createNecessariesPackages"} className="link">
-				<button>
-					Add
-				</button>	
-			</Link>
-		
+		<div id="page-top" style={{backgroundImage: `url(${rectangle2})`}}>   
+			{/* Page Wrapper */}
+			<div id="wrapper">
+			<ManagerSidebar />
+			{/* Content Wrapper */}
+			<div id="content-wrapper" className="d-flex flex-column">
+			<div id="content">
+				<Topbar />  
+				<div className="container-fluid">
+				{/* Page Heading */}
+				{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+				<h1 className="h3 mb-4 text-gray-800 text-center"><strong>Gói sản phẩm hiện có</strong></h1>
+					<NecessariesPackages necessariesPackages={necessariesPackages}/>
+				</div>
+				{/* /.container-fluid */}
+			
+					{/* End of Main Content */}
+				</div>
+				{/* End of Content Wrapper */}
+				</div>        
+			</div>			
 		</div>
-	</>
 	);
 }

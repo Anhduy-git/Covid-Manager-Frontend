@@ -1,11 +1,12 @@
 import { useEffect, useState, useContext } from "react";
-import Header from "../../../components/header/Header";
 import ManagerSidebar from "../../../components/manager-components/manager-sidebar/ManagerSidebar";
-import Users from "../../../components/manager-components/users/Users";
-import "./listRelatedUsers.css";
 import axios from "axios";
 import { Context } from "../../../context/Context";
 import { Link, useLocation, useHistory } from "react-router-dom";
+import Topbar from "../../../components/topbar/TopBar";
+import RelatedUsers from "../../../components/manager-components/related-users/RelatedUsers";
+import { rectangle2, account, manage, location, register } 
+	from "../../../assets";
 
 export default function ListRelatedUsers() {	
 
@@ -64,34 +65,38 @@ export default function ListRelatedUsers() {
 	}, [relatedUsers, sortTerm]); //if search update, then run again
 
 	return (
-	<>
-		<Header />
-		<div className="home">
-		<input type="text" 
-			placeholder="Search by id number"
-			onChange={(event) => {
-				setSearchTerm(event.target.value);					
-		}} />
-		<button className="loginButton" onClick={onNameSortClick}>
-			Sort By Name
-		</button>	
-		<button className="loginButton" onClick={onStateSortClick}>
-			Sort By state
-		</button>	
-		<Users users={relatedUsers} searchTerm={searchTerm}/>	
-
-		<Link to={`/createRelatedUsers?username=${username}`} className="link">
-			<button>
-				Add
-			</button>	
-		</Link>
-
-		<button className="loginButton" onClick={() => window.location.replace('/listUsers')} >
-			Done
-		</button>	
-
 		
-		</div>
-	</>
+		<div id="page-top" style={{backgroundImage: `url(${rectangle2})`}}>   
+			{/* Page Wrapper */}
+			<div id="wrapper">
+			<ManagerSidebar />
+			{/* Content Wrapper */}
+			<div id="content-wrapper" className="d-flex flex-column">
+			<div id="content">
+				<Topbar />  
+				
+				<div className="container-fluid">
+				{/* Page Heading */}
+				{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+				<h1 className="h3 mb-4 text-gray-800 text-center">Danh sách người liên đới</h1>
+					<RelatedUsers users={relatedUsers} searchTerm={searchTerm}/>
+      			</div>
+				  <Link to={`/createRelatedUsers?username=${username}`} className="nav-link">
+				  <button type="button" className="btn btn-primary ">
+							Thêm
+					</button>
+					</Link>
+				{/* /.container-fluid */}
+			</div>
+					
+					{/* End of Main Content */}
+				</div>
+				{/* End of Content Wrapper */}
+				</div>        
+			</div>			
+		
 	);
+		
+	
+	
 }

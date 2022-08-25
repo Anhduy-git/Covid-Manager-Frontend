@@ -8,6 +8,10 @@ import { useContext } from "react";
 import { Context } from "../../../context/Context";
 import { Link } from "react-router-dom";
 import AdminSidebar from "../../../components/admin-components/admin-sidebar/AdminSidebar";
+import AdminTopbar from "../../../components/admin-components/admin-topbar/AdminTopBar";
+import NotifyModal from "../../../components/modals/notify-modal/NotifyModal";
+import { rectangle2, covid1 } 
+	from "../../../assets";
 
 export default function ListManagers() {		
 	const [managers, setManagers] = useState([]);	
@@ -35,19 +39,36 @@ export default function ListManagers() {
 	},[managers]); //if search update, then run again
 
 	return (
-	<>
-		<Header />
-		<div className="home">
-		<Managers managers={managers}/>	
+		<div id="page-top" style={{backgroundImage: `url(${rectangle2})`, backgroundRepeat: "no-repeat"}}>  
+		 
+        <div id="wrapper">
+			<AdminSidebar />
+          
+          {/* Content Wrapper */}
+          <div id="content-wrapper" className="d-flex flex-column">
+            {/* Main Content */}
+            <div id="content">
+			
+				<AdminTopbar />		
+				
+				{/* Begin Page Content */}							
+				<div className="container-fluid">
+				{/* Page Heading */}
+				{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+				<h1 className="h3 mb-4 text-gray-800 text-center"><strong>Quản lý tài khoản</strong></h1>
+				<Managers managers={managers}/>
+			</div>				
+			{/* /.container-fluid */}
 
-		<Link to={"/createManagers"} className="link">
-			<button>
-				Add
-			</button>	
-		</Link>
-
-		<AdminSidebar />
-		</div>
-	</>
+			{/* End of Main Content */}
+            </div>
+            {/* End of Content Wrapper */}
+          </div>         
+        </div>
+		
+		
+      </div>
 	);
 }
+
+

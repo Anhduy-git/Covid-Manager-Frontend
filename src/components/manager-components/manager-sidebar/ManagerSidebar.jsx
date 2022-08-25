@@ -1,39 +1,72 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
-import "./managerSidebar.css";
+import { accountSide, locationSide, 
+	adminSide,  } 
+	from "../../../assets";
 
 export default function ManagerSidebar() {
   
   
   return (
-    <div className="sidebar">
-      <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
-        <img
-          src="https://i.pinimg.com/236x/1e/3f/58/1e3f587572a7a7b20bbf1828595a1786--holiday-party-themes-holiday-gift-guide.jpg"
-          alt=""
-        />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui
-          necessitatibus nostrum illum reprehenderit.
-        </p>
-      </div>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
-        <ul className="sidebarList">
-          
-        </ul>
-      </div>
-      <div className="sidebarItem">
-        <span className="sidebarTitle">FOLLOW US</span>
-        <div className="sidebarSocial">
-          <i className="sidebarIcon fab fa-facebook-square"></i>
-          <i className="sidebarIcon fab fa-twitter-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
-          <i className="sidebarIcon fab fa-instagram-square"></i>
-        </div>
-      </div>
-    </div>
+   
+		<>
+		 {/* Sidebar */}
+		 <ul className="navbar-nav sidebar sidebar-dark accordion rounded" id="accordionSidebar">
+            {/* Sidebar - Brand */}
+            <a className="sidebar-brand d-flex align-items-center justify-content-center">
+              <div className="sidebar-brand-icon rotate-n-15">
+                <i className="fas fa-laugh-wink" />
+              </div>
+              <div className="sidebar-brand-text mx-3">Hi, Manager</div>
+            </a>
+            {/* Divider */}
+            <hr className="sidebar-divider my-0" />
+            {/* Nav Item - Dashboard */}
+            <li className="nav-item active">
+			<Link to={'/'} className="nav-link">				
+				<img src={adminSide} />Người quản lý			
+			</Link>
+            </li>
+            {/* Nav Item - Account Menu */}
+            <li className="nav-item">
+              <a className="nav-link"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+			  <img src={accountSide} />Quản lý người dùng
+              </a>
+              <div id="collapseTwo" className="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div className="bg-white py-2 collapse-inner rounded">
+                  <h6 className="collapse-header">Thiết lập tài khoản:</h6>
+				  <Link to={'/createUsers'} className="collapse-item active">
+                	Thêm người dùng
+				  </Link>
+				  <Link to={'/listUsers'} className="collapse-item">
+				  	Thông tin người dùng
+				  </Link>                  
+                </div>
+              </div>
+            </li>
+           
+            {/* Nav Item - Location Menu */}   
+            <li className="nav-item">
+              <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+			  <img src={locationSide} />Quản lý sản phẩm
+              </a>
+			</li>
+			<li className="nav-item">
+              <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+			  <img src={locationSide} />Quản lý gói sản phẩm
+              </a>
+			</li>
+              
+          </ul>
+          {/* End of Sidebar */}
+	</>
+
+		
+	
+
+		
+	
+	
   );
 }
+

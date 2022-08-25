@@ -2,8 +2,12 @@ import axios from "axios";
 import { useContext, useRef, useEffect, useState } from "react";
 import { Context } from "../../../context/Context";
 import { useHistory, useLocation, Link } from "react-router-dom";
-import "./userInfo.css";
 import NotifyModal from "../../../components/modals/notify-modal/NotifyModal";
+import { rectangle2, account, manage, location, register } 
+	from "../../../assets";
+import Topbar from "../../../components/topbar/TopBar";
+import ManagerSidebar from "../../../components/manager-components/manager-sidebar/ManagerSidebar";
+
 
 export default function UserInfo() {
 	
@@ -44,8 +48,7 @@ export default function UserInfo() {
 				placeOfTreatment: selectedTreatmentPlace
 
 			}, config);
-			if (res.data && res.data.treatmentPlaceIsFull) {
-				console.log("yes")
+			if (res.data && res.data.treatmentPlaceIsFull) {				
 				setModalNotifyOpen(true);
 				return;
 			}
@@ -99,7 +102,84 @@ export default function UserInfo() {
 	},[])
 
 	return (
-	<div className="login">
+		<div id="page-top" style={{backgroundImage: `url(${rectangle2})`}}>   
+			{/* Page Wrapper */}
+			<div id="wrapper">
+			<ManagerSidebar />
+			{/* Content Wrapper */}
+			<div id="content-wrapper" className="d-flex flex-column">
+			<div id="content">
+				<Topbar />  
+				<div className="container-fluid">
+			{/* Page Heading */}
+			{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+			<h1 className="h3 mb-4 text-gray-800 text-center">Thông tin chi tiết</h1>
+				<div className="card border-left-success shadow h-100 py-2">
+				<div className="card-body">
+					<form onSubmit={handleSubmit}> 
+					<ul>
+						<li><label>Họ Tên: </label><span id="name"/>{" " + username}</li>
+						<br />
+						<li><label>CCCD/CMND:</label><span id="identity-card" />{" " + id}</li>
+						<br />
+						<li><label>Năm sinh:</label><span id="year" />{" " + dateOfBirth}</li>
+						<br />
+						<li><label>Địa chỉ:</label><span id="address" />
+						{" " + selectedCity + ", " + selectedDistrict + ", " + selectedWard}
+						</li>
+						<br />
+						<li><label>Trạng thái:</label><span id="state" /></li>
+						<div className="col-sm-6 mb-3 mb-sm-0">
+								<select className="form-select form-control-user" 
+								aria-label="Default select example" name="state" value={selectedState} 
+								onChange={(e) => setSelectedState(e.target.value)}>								
+									<option value="F0">F0</option>
+									<option value="F1">F1</option>
+									<option value="F2">F2</option>
+									<option value="F3">F3</option>
+								</select>
+						</div>
+						<li><label>Nơi điều trị/cách ly:</label><span id="address" /></li>
+						<div className="col-sm-6 mb-3 mb-sm-0">
+								<select className="form-select form-control-user" 
+								aria-label="Default select example"
+								name="placeOfTreatment" value={selectedTreatmentPlace} 
+								onChange={(e) => setSelectedTreatmentPlace(e.target.value)}>								
+								{treatmentPlaces.map((treatmentPlace, key) => {								
+									return <option key={key} value={treatmentPlace.name}>{treatmentPlace.name}</option>
+									})}
+								</select>
+							</div>
+						<br />						
+						<br />						
+						<button type="button" className="btn btn-dark">Liên quan tới người Covid-19</button>
+						<button type="button" className="btn btn-dark" onClick={onUpdateBtnClick}>Cập nhật</button>
+						<br />
+						<br />
+						<button type="button" className="btn btn-dark">Lịch sử quá trình được quản lý</button>
+						<button  className="btn btn-dark" type="submit" style={{visibility: updating ? 'visible':'hidden'}}>Lưu</button>
+
+					</ul>
+					</form>
+				</div>
+				</div>
+				{/* /.container-fluid */}
+			</div>
+					{/* End of Main Content */}
+				</div>
+				{/* End of Content Wrapper */}
+				</div>        
+			</div>
+			{modalNotifyOpen && <NotifyModal 
+			setOpenModal={setModalNotifyOpen}		
+			messageTitle={"Lỗi"} 
+			messageBody={"Nơi điều trị đã đầy!"}/>}
+		</div>
+	);
+}
+
+
+{/* <div className="login">
 		<span className="loginTitle">Users Info</span>
 		<form className="loginForm" onSubmit={handleSubmit} >
 			
@@ -203,6 +283,4 @@ export default function UserInfo() {
 		setOpenModal={setModalNotifyOpen}		
 		messageTitle={"ERROR"} 
 		messageBody={"Treatment place is full"}/>}
-	</div>
-	);
-}
+	</div> */}

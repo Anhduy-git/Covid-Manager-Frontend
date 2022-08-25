@@ -1,4 +1,3 @@
-import "./user.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Context } from "../../../context/Context";
@@ -20,18 +19,27 @@ export default function User({ user }) {
 	// 	}
 	// }
 	return (
-		<Link to={`/userInfo/?username=${user.username}`} className="link">
-		<div className="post">      
-			<div className="postInfo">        
-				
-				<span className="postTitle">{user.username}</span>								
-				<span className="postTitle">{user.name}</span>
-				<span className="postTitle">{user.identityCard}</span>
-				<span className="postTitle">{user.state}</span>
-			</div>	
-
-		</div>
-		</Link>	
+			<>
+			<div className="form-group row">
+				<div className="col-sm-6 mb-3 mb-sm-0">
+				<input type="text" className="form-control form-control-user" id="exampleUsername" value={user.username} />
+				</div>
+				<div className="col-sm-6">
+				<input type="text" className="form-control form-control-user" id="exampleLastName" value={user.name} />
+				</div>
+			</div>
+			<div className="form-group">
+				<input type="email" className="form-control form-control-user" id="exampleInputIdentity" value={user.identityCard} />
+			</div>
+			<div className="form-group">
+				<Link to={`/userInfo/?username=${user.username}`} className="btn btn-primary btn-user btn-block">
+				Chi tiết
+				</Link>
+			</div>						
+		
+			</>
 
 	);
 }
+
+

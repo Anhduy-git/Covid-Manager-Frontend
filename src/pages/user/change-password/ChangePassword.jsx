@@ -17,8 +17,7 @@ export default function ChangePassword() {
 	const [modalSaveOpen, setModalSaveOpen] = useState(false);
 	const [modalNotifyOpen, setModalNotifyOpen] = useState(false);
 
-	const { token, dispatch } = useContext(Context);
-	const history = useHistory();	
+	const { token, dispatch } = useContext(Context);	
 	const config = {
 		headers: {
 			"Authorization": "Bearer " + token
