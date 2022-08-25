@@ -2,11 +2,13 @@
   "name": "covid-manager",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Anhduy-git.github.io/Covid-Web-React",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.21.1",
+    "gh-pages": "^4.0.0",
     "moment": "^2.29.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -15,10 +17,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "set PORT=3005 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://covid-manager-web.herokuapp.com/"
 }

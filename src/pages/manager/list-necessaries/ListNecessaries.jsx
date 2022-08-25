@@ -72,143 +72,102 @@ export default function ListNecessaries() {
 			<div id="content-wrapper" className="d-flex flex-column">
 			<div id="content">
 				<Topbar />  
-				<div class="container-fluid">
-
-                <!-- Page Heading -->
-                <!-- <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> -->
-                <h1 class="h3 mb-4 text-gray-800 text-center"><strong>Chi tiết về gói sản phẩm</strong></h1>
-                <div class="overflow-scroll main-content">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-                            
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                       
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-    
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-    
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-                            
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                       
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-    
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
-                        <div class="card">
-                            <div class="card">
-                                <div class="d-flex justify-content-between p-3">
-                                <p class="lead mb-0">Cá lóc</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" class="card-img-top" alt="Laptop" />
-                                <div class="card-body">
-    
-                                <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0"> Số lượng :</h5>
-                                    <h5 class="text-dark mb-0">1 kg</h5>
-                                </div>
-                    
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="text-muted mb-0">Giá cả: <span class="fw-bold">50.000VND</span></p>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            </div>
+				<div className="container-fluid">
+				{/* Page Heading */}
+				{/* <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> */}
+				<h1 className="h3 mb-4 text-gray-800 text-center"><strong>Gói sản phẩm hiện có</strong></h1>
+				<div className="overflow-scroll main-content">
+				<div className="row">
+					
+					<div className="col-md-6 col-lg-4 mb-4 mb-md-0">
+					<div className="card">
+						<div className="d-flex justify-content-between p-3">
+						<a href="#"><p className="lead mb-0">Thực phẩm tươi sống</p></a>
+						</div>
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" className="card-img-top" alt="Laptop" />
+						<div className="card-body">
+						<div className="d-flex justify-content-between mb-3">
+							<h5 className="mb-0">Giới hạn</h5>
+							<h5 className="text-dark mb-0">100/ngày</h5>
+						</div>
+						<div className="d-flex justify-content-between mb-2">
+							<p className="text-muted mb-0">Tối đa: <span className="fw-bold">20</span></p>
+						</div>
+						</div>
+					</div>
+					</div>
+					<div className="col-md-6 col-lg-4 mb-4 mb-md-0">
+					<div className="card">
+						<div className="d-flex justify-content-between p-3">
+						<a href="#"><p className="lead mb-0">Thực phẩm tươi sống</p></a>
+						</div>
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" className="card-img-top" alt="Laptop" />
+						<div className="card-body">
+						<div className="d-flex justify-content-between mb-3">
+							<h5 className="mb-0">Giới hạn</h5>
+							<h5 className="text-dark mb-0">100/ngày</h5>
+						</div>
+						<div className="d-flex justify-content-between mb-2">
+							<p className="text-muted mb-0">Tối đa: <span className="fw-bold">20</span></p>
+						</div>
+						</div>
+					</div>
+					</div>
+					<div className="row">
+					<div className="col-md-12 col-lg-4 mb-4 mb-lg-0">
+						<div className="card">
+						<div className="d-flex justify-content-between p-3">
+							<a href="#"><p className="lead mb-0">Thực phẩm tươi sống</p></a>
+						</div>
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" className="card-img-top" alt="Laptop" />
+						<div className="card-body">
+							<div className="d-flex justify-content-between mb-3">
+							<h5 className="mb-0">Giới hạn</h5>
+							<h5 className="text-dark mb-0">100/ngày</h5>
+							</div>
+							<div className="d-flex justify-content-between mb-2">
+							<p className="text-muted mb-0">Tối đa: <span className="fw-bold">20</span></p>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div className="col-md-6 col-lg-4 mb-4 mb-md-0">
+						<div className="card">
+						<div className="d-flex justify-content-between p-3">
+							<a href="#"><p className="lead mb-0">Thực phẩm tươi sống</p></a>
+						</div>
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" className="card-img-top" alt="Laptop" />
+						<div className="card-body">
+							<div className="d-flex justify-content-between mb-3">
+							<h5 className="mb-0">Giới hạn</h5>
+							<h5 className="text-dark mb-0">100/ngày</h5>
+							</div>
+							<div className="d-flex justify-content-between mb-2">
+							<p className="text-muted mb-0">Tối đa: <span className="fw-bold">20</span></p>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div className="col-md-6 col-lg-4 mb-4 mb-md-0">
+						<div className="card">
+						<div className="d-flex justify-content-between p-3">
+							<a href="#"><p className="lead mb-0">Thực phẩm tươi sống</p></a>
+						</div>
+						<img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp" className="card-img-top" alt="Laptop" />
+						<div className="card-body">
+							<div className="d-flex justify-content-between mb-3">
+							<h5 className="mb-0">Giới hạn</h5>
+							<h5 className="text-dark mb-0">100/ngày</h5>
+							</div>
+							<div className="d-flex justify-content-between mb-2">
+							<p className="text-muted mb-0">Tối đa: <span className="fw-bold">20</span></p>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				</div></div>
 				{/* /.container-fluid */}
 			
 					{/* End of Main Content */}
